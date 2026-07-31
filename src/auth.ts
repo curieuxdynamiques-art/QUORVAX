@@ -1,20 +1,15 @@
 import NextAuth, { type NextAuthOptions } from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import crypto from 'node:crypto';
 import { useUsers } from './store/users';
 
-// 简单的服务端哈希
+// 服务端哈希
 function serverHash(pwd: string): string {
   return crypto.createHash('sha256').update(pwd).digest('hex');
 }
 
 export const authOptions: NextAuthOptions = {
   providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID || '',
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
-    }),
     CredentialsProvider({
       name: 'credentials',
       credentials: {
@@ -69,13 +64,10 @@ export const authOptions: NextAuthOptions = {
     signIn: '/auth/signin',
   },
   callbacks: {
-    async jwt({ token, account, user, profile }) {
+    async jwt({ token, user, account }) {
       if (account && user) {
         token.uid = user.id;
         token.provider = account.provider;
-      }
-      if (profile && account?.provider === 'google') {
-        token.uid = (profile as { sub?: string }).sub || token.sub;
       }
       return token;
     },
