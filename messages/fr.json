@@ -182,7 +182,8 @@
     "products": "Produits",
     "sales": "Tableau de bord des ventes",
     "analytics": "Analytique",
-    "backToStore": "Retour à la boutique"
+    "backToStore": "Retour à la boutique",
+    "logout": "Déconnexion"
   },
   "Analytics": {
     "title": "Trafic et analytique",

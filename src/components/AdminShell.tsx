@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { usePathname } from '@/i18n/navigation';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import { useSession, signOut } from 'next-auth/react';
 
 type NavItem = {
   href: '/admin' | '/admin/products' | '/admin/sales' | '/admin/analytics';
@@ -22,6 +23,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
   const t = useTranslations('AdminNav');
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { data: session } = useSession();
 
   function isActive(href: string) {
     if (href === '/admin') return pathname === '/admin' || pathname.endsWith('/admin');
@@ -77,7 +79,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
               ))}
             </nav>
 
-            {/* Back to store */}
+            {/* Back to store + User info + Logout */}
             <div className="border-t border-slate-200 p-3">
               <Link
                 href="/"
@@ -86,6 +88,36 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
                 <span className="text-base">←</span>
                 {t('backToStore')}
               </Link>
+              {session?.user && (
+                <div className="mt-2 border-t border-slate-100 pt-2">
+                  <div className="flex items-center gap-2 px-3 py-2">
+                    {session.user.image && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={session.user.image}
+                        alt={session.user.name || ''}
+                        className="h-7 w-7 rounded-full"
+                      />
+                    )}
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-xs font-medium text-slate-700">
+                        {session.user.name || session.user.email}
+                      </p>
+                      <p className="truncate text-[10px] text-slate-400">
+                        {(session.user as { login?: string }).login || session.user.email}
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => signOut({ callbackUrl: '/' })}
+                    className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50"
+                  >
+                    <span className="text-base">⏻</span>
+                    {t('logout')}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </aside>

@@ -182,7 +182,8 @@
     "products": "Produkte",
     "sales": "Verkaufsdashboard",
     "analytics": "Analytik",
-    "backToStore": "Zum Shop"
+    "backToStore": "Zum Shop",
+    "logout": "Abmelden"
   },
   "Analytics": {
     "title": "Traffic & Analytik",
