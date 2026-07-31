@@ -1,0 +1,312 @@
+{
+  "Nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "cart": "Warenkorb",
+    "faq": "FAQ"
+  },
+  "Hero": {
+    "title": "Hochwertige Technik-Zubehör für Europa",
+    "subtitle": "Laptops, Tablets, Monitore, Kopfhörer, Tastaturen, Mäuse und mehr — für maximale Produktivität.",
+    "cta": "Jetzt einkaufen",
+    "secondaryCta": "Katalog ansehen"
+  },
+  "Features": {
+    "title": "Warum wir",
+    "shipping": {
+      "title": "Kostenloser EU-Versand",
+      "desc": "Ab €49 Bestellwert in ganz Europa."
+    },
+    "warranty": {
+      "title": "2 Jahre Garantie",
+      "desc": "Alle Produkte nach EU-Garantiestandards."
+    },
+    "support": {
+      "title": "Lokaler Support",
+      "desc": "Mehrsprachiger Kundenservice, 7 Tage die Woche."
+    },
+    "payment": {
+      "title": "Sichere Zahlung",
+      "desc": "Visa, Mastercard, PayPal, Klarna unterstützt."
+    }
+  },
+  "Products": {
+    "title": "Unsere Produkte",
+    "subtitle": "Laptops, Tablets, Monitore, Kopfhörer, Tastaturen, Mäuse und mehr für jeden Workflow.",
+    "addToCart": "In den Warenkorb",
+    "viewDetails": "Details ansehen",
+    "from": "Ab",
+    "categories": {
+      "all": "Alle",
+      "mouse": "Mäuse",
+      "keyboard": "Tastaturen",
+      "headphone": "Over-Ear-Kopfhörer",
+      "earphone": "In-Ear-Kopfhörer / TWS",
+      "laptop": "Laptops",
+      "tablet": "Tablets",
+      "monitor": "Monitore",
+      "charger": "Ladegeräte",
+      "powerbank": "Powerbanks",
+      "cable": "Kabel",
+      "usb_hub": "USB-Hubs / Docking",
+      "webcam": "Webcams",
+      "speaker": "Lautsprecher",
+      "smartwatch": "Smartwatches",
+      "storage": "Speicher (SSD / USB)"
+    },
+    "specs": "Spezifikationen",
+    "description": "Beschreibung",
+    "relatedProducts": "Ähnliche Produkte",
+    "inStock": "Auf Lager",
+    "outOfStock": "Nicht verfügbar"
+  },
+  "Cart": {
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist leer",
+    "continueShopping": "Weiter einkaufen",
+    "subtotal": "Zwischensumme",
+    "shipping": "Versand",
+    "total": "Gesamt",
+    "checkout": "Zur Kasse",
+    "remove": "Entfernen",
+    "quantity": "Menge",
+    "free": "Kostenlos"
+  },
+  "Checkout": {
+    "title": "Kasse",
+    "comingSoon": "Zahlungsanbindung folgt in Kürze",
+    "comingSoonDesc": "Wir finalisieren unsere Zahlungspartner (Stripe / Klarna / PayPal). Für frühe Bestellungen kontaktieren Sie uns bitte direkt.",
+    "contactForOrder": "Für Bestellung kontaktieren",
+    "cartSummary": "Bestellübersicht"
+  },
+  "Footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "support": "Support",
+    "shipping": "Versandpolitik",
+    "returns": "Rückgabe & Rückerstattung",
+    "privacy": "Datenschutzerklärung",
+    "terms": "AGB",
+    "faq": "FAQ",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Abonnieren Sie für Produktlaunches und Angebote.",
+    "subscribe": "Abonnieren",
+    "emailPlaceholder": "Ihre E-Mail-Adresse"
+  },
+  "Cookie": {
+    "title": "Wir verwenden Cookies",
+    "desc": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und Datenverkehr zu analysieren. Sie können alle oder nur notwendige Cookies akzeptieren.",
+    "acceptAll": "Alle akzeptieren",
+    "acceptNecessary": "Nur notwendige",
+    "learnMore": "Mehr erfahren"
+  },
+  "About": {
+    "title": "Über uns",
+    "intro": "Wir entwerfen und kuratieren hochwertige Computerperipherie für europäische Kunden.",
+    "story": "Unsere Geschichte",
+    "storyContent": "Gegründet mit der Mission, zuverlässiges, erschwingliches und schön gestaltetes Technikzubehör für alle in Europa zugänglich zu machen. Alle Produkte sind CE-zertifiziert und entsprechen EU-Vorschriften."
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden.",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "addressLabel": "Adresse"
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "desc": "Die gesuchte Seite existiert nicht.",
+    "backHome": "Zurück zur Startseite"
+  },
+  "Admin": {
+    "title": "Admin · Zahlungskonfiguration",
+    "subtitle": "Konfigurieren Sie Stripe- und PayPal-Zugangsdaten für Ihren Shop.",
+    "securityNotice": "Keine Authentifizierung geschützt",
+    "securityDesc": "Diese Admin-Seite ist derzeit ungeschützt. Vor dem Live-Betrieb Authentifizierung (z. B. NextAuth) hinzufügen und Secret Keys serverseitig als Umgebungsvariablen speichern.",
+    "demoMode": "Demomodus",
+    "demoModeDesc": "Wenn aktiviert, zeigt der Checkout die Zahlungs-UI ohne echte API-Aufrufe. Deaktivieren Sie ihn nach Konfiguration der Live-Keys.",
+    "enable": "Diese Zahlungsmethode aktivieren",
+    "statusReady": "Bereit",
+    "statusNotReady": "Nicht konfiguriert",
+    "testConnection": "Verbindung testen",
+    "testing": "Teste...",
+    "testOk": "Verbindung erfolgreich",
+    "testFail": "Nicht konfiguriert oder ungültig",
+    "save": "Konfiguration speichern",
+    "reset": "Auf Standard zurücksetzen",
+    "saved": "Konfiguration gespeichert",
+    "viewSales": "Verkaufsdaten ansehen",
+    "manageProducts": "Produkte verwalten",
+    "goToCheckout": "Zum Checkout",
+    "stripe": {
+      "title": "Stripe (Kreditkarte)",
+      "desc": "Akzeptiert Visa, Mastercard, Amex mit 3D Secure.",
+      "publishableKey": "Publishable Key",
+      "secretKey": "Secret Key"
+    },
+    "paypal": {
+      "title": "PayPal",
+      "desc": "Kunden zahlen über PayPal-Guthaben oder verknüpfte Karten.",
+      "clientId": "Client ID",
+      "clientSecret": "Client Secret"
+    },
+    "guide": {
+      "title": "So erhalten Sie API-Schlüssel",
+      "stripe": {
+        "title": "Stripe",
+        "step1": "Registrierung unter dashboard.stripe.com",
+        "step2": "Unternehmensverifikation abschließen",
+        "step3": "Gehen Sie zu Developers → API Keys",
+        "step4": "Publishable Key und Secret Key kopieren"
+      },
+      "paypal": {
+        "title": "PayPal",
+        "step1": "Registrierung unter developer.paypal.com (Sandbox) oder business.paypal.com (Live)",
+        "step2": "REST-App unter My Apps erstellen",
+        "step3": "Client ID und Secret abrufen",
+        "step4": "Für Tests zuerst Sandbox-Zugangsdaten verwenden"
+      }
+    }
+  },
+  "AdminNav": {
+    "title": "Admin-Panel",
+    "payment": "Zahlungskonfiguration",
+    "products": "Produkte",
+    "sales": "Verkaufsdashboard",
+    "analytics": "Analytik",
+    "backToStore": "Zum Shop"
+  },
+  "Analytics": {
+    "title": "Traffic & Analytik",
+    "subtitle": "Seitenaufrufe, Sessions, Events und der Conversion-Funnel im Überblick.",
+    "days": "Letzte {d} Tage",
+    "clearData": "Alle Daten löschen",
+    "clearConfirm": "Möchten Sie wirklich alle Analyse-Daten löschen?",
+    "noData": "Noch keine Daten. Durchsuchen Sie die Seite, um Traffic zu generieren.",
+    "kpi": {
+      "pageViews": "Seitenaufrufe",
+      "uniqueSessions": "Sessions",
+      "events": "Gespeicherte Events",
+      "eventsSub": "product_view / add_to_cart / begin_checkout / purchase",
+      "avgSessionDuration": "Ø Sitzungsdauer",
+      "sessionDurationSub": "Geschätzt anhand der Seitenaufruf-Zeitstempel",
+      "viewsPerSession": "Seiten / Session",
+      "viewsPerSessionSub": "PV ÷ Sessions"
+    },
+    "traffic": { "title": "Täglicher Traffic (PV & Sessions)" },
+    "device": { "title": "Geräteverteilung" },
+    "pageTypes": { "title": "Seiten-Typ-Verteilung" },
+    "funnel": { "title": "Conversion-Funnel" },
+    "topProducts": {
+      "title": "Top-Produkte nach Aufrufen",
+      "name": "Produkt",
+      "views": "Aufrufe"
+    },
+    "topAdded": {
+      "title": "Top-Produkte nach Warenkorb",
+      "name": "Produkt",
+      "count": "Hinzugefügt"
+    },
+    "topPages": {
+      "title": "Top-Seiten",
+      "path": "Pfad",
+      "views": "Aufrufe"
+    }
+  },
+  "ProductManager": {
+    "title": "Produktverwaltung",
+    "subtitle": "Produkte hinzufügen, bearbeiten und verwalten.",
+    "backToAdmin": "Zurück zum Admin",
+    "addProduct": "Produkt hinzufügen",
+    "editProduct": "Produkt bearbeiten",
+    "deleteConfirm": "Möchten Sie dieses Produkt wirklich löschen?",
+    "category": "Kategorie",
+    "price": "Preis",
+    "slug": "URL-Slug",
+    "imageUrl": "Bild-URL",
+    "name": "Name",
+    "description": "Beschreibung",
+    "wireless": "Kabellos",
+    "inStock": "Auf Lager",
+    "outOfStock": "Nicht verfügbar",
+    "ceCertified": "CE-zertifiziert",
+    "specs": "Spezifikationen",
+    "addSpec": "Spezifikation hinzufügen",
+    "spec": "Spez.",
+    "specLabel": "Bezeichnung",
+    "specValue": "Wert",
+    "remove": "Entfernen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "image": "Bild",
+    "status": "Status",
+    "actions": "Aktionen",
+    "mouse": "Maus",
+    "keyboard": "Tastatur",
+    "allCategories": "Alle",
+    "searchPlaceholder": "Nach Name oder Slug suchen...",
+    "productsCount": "Produkte",
+    "noProducts": "Keine Produkte gefunden"
+  },
+  "Sales": {
+    "title": "Verkaufsdashboard",
+    "subtitle": "Übersicht über Bestellungen, Umsatz und Produktperformance.",
+    "backToAdmin": "Zurück zum Admin",
+    "clearConfirm": "Möchten Sie wirklich alle Verkaufsdaten löschen? Dies kann nicht rückgängig gemacht werden.",
+    "clearData": "Daten löschen",
+    "totalRevenue": "Gesamtumsatz",
+    "totalOrders": "Gesamtbestellungen",
+    "avgOrderValue": "Durchschnittswert",
+    "refundedOrders": "Erstattete Bestellungen",
+    "salesTrend": "Verkaufstrend (Letzte 14 Tage)",
+    "topProducts": "Top-Produkte",
+    "sold": "verkauft",
+    "paymentMethods": "Zahlungsmethoden",
+    "creditCardStripe": "Kreditkarte (Stripe)",
+    "orders": "Bestellungen",
+    "salesByCountry": "Verkäufe nach Land",
+    "recentOrders": "Neueste Bestellungen",
+    "orderId": "Bestell-Nr.",
+    "date": "Datum",
+    "items": "Artikel",
+    "country": "Land",
+    "payment": "Zahlung",
+    "status": "Status",
+    "total": "Gesamt",
+    "card": "Karte"
+  },
+  "Payment": {
+    "selectMethod": "Zahlungsmethode wählen",
+    "creditCard": "Kreditkarte",
+    "poweredBy": "Bereitgestellt von",
+    "cardNumber": "Kartennummer",
+    "expiry": "Ablaufdatum",
+    "cvc": "CVC",
+    "nameOnCard": "Name auf Karte",
+    "pay": "Zahlen",
+    "processing": "Verarbeitung...",
+    "securePayment": "Sichere Zahlung · 256-Bit-SSL-verschlüsselt",
+    "vatIncluded": "MwSt. zum geltenden Satz enthalten",
+    "demoNotice": "Demomodus: Es erfolgt keine echte Abbuchung. Konfigurieren Sie Live-Keys im Admin für echte Zahlungen.",
+    "paypalDesc": "Sie werden zu PayPal weitergeleitet, um Ihre Zahlung sicher abzuschließen.",
+    "paypalRedirectNote": "PayPal-Guthaben, verknüpftes Bankkonto oder Karte akzeptiert.",
+    "successTitle": "Zahlung erfolgreich",
+    "successDesc": "Vielen Dank! Ihre Bestellung wurde aufgegeben. Eine Bestätigungs-E-Mail ist unterwegs.",
+    "orderNumber": "Bestellnummer",
+    "paymentMethod": "Zahlungsmethode",
+    "continueShopping": "Weiter einkaufen",
+    "configIncomplete": "Zahlungskonfiguration unvollständig",
+    "configIncompleteDesc": "Einige Zahlungsmethoden sind nicht konfiguriert. Aktivieren Sie den Demomodus oder fügen Sie API-Schlüssel hinzu.",
+    "goToAdmin": "Zum Admin"
+  }
+}
