@@ -11,7 +11,20 @@
     "title": "Hochwertige Technik-Zubehör für Europa",
     "subtitle": "Laptops, Tablets, Monitore, Kopfhörer, Tastaturen, Mäuse und mehr — für maximale Produktivität.",
     "cta": "Jetzt einkaufen",
-    "secondaryCta": "Katalog ansehen"
+    "secondaryCta": "Katalog ansehen",
+    "badge": "CE-zertifiziert · Versand in alle EU-Länder",
+    "slide1Title": "Optimieren Sie Ihren Arbeitsplatz",
+    "slide1Desc": "Hochwertige Tastaturen, Mäuse und Zubehör für Produktivität und Komfort.",
+    "slide1Cta": "Zubehör entdecken",
+    "slide2Title": "Klang, der Sie berührt",
+    "slide2Desc": "Immersive Kopfhörer und In-Ear-Kopfhörer mit aktiver Geräuschunterdrückung. Hören Sie jedes Detail.",
+    "slide2Cta": "Audio entdecken",
+    "slide3Title": "Power. Präzision. Performance.",
+    "slide3Desc": "Von Ladegeräten bis Monitoren — alles für Ihr Tech-Setup an einem Ort.",
+    "slide3Cta": "Alle ansehen",
+    "viewAll": "Alle ansehen",
+    "ctaTitle": "Bereit, Ihr Setup aufzuwerten?",
+    "ctaDesc": "Kostenloser Versand in ganz Europa. 2 Jahre Garantie. 30 Tage Rückgabe."
   },
   "Features": {
     "title": "Warum wir",
@@ -54,13 +67,23 @@
       "webcam": "Webcams",
       "speaker": "Lautsprecher",
       "smartwatch": "Smartwatches",
-      "storage": "Speicher (SSD / USB)"
+      "storage": "Speicher (SSD / USB)",
+      "accessory": "Zubehör"
     },
     "specs": "Spezifikationen",
     "description": "Beschreibung",
     "relatedProducts": "Ähnliche Produkte",
     "inStock": "Auf Lager",
-    "outOfStock": "Nicht verfügbar"
+    "outOfStock": "Nicht verfügbar",
+    "shopByCategory": "Nach Kategorie einkaufen",
+    "categoryDesc": "Finden Sie genau das, was Sie brauchen",
+    "shopNow": "Jetzt einkaufen"
+  },
+  "Accessories": {
+    "badge": "Neuheiten",
+    "title": "Maus- & Tastaturzubehör",
+    "desc": "Vervollständigen Sie Ihr Setup mit Premium-Pads, Ständern und Kabelmanagement-Lösungen.",
+    "cta": "Zubehör entdecken"
   },
   "Cart": {
     "title": "Warenkorb",
@@ -94,7 +117,12 @@
     "newsletter": "Newsletter",
     "newsletterDesc": "Abonnieren Sie für Produktlaunches und Angebote.",
     "subscribe": "Abonnieren",
-    "emailPlaceholder": "Ihre E-Mail-Adresse"
+    "emailPlaceholder": "Ihre E-Mail-Adresse",
+    "aboutUs": "Über uns",
+    "contactUs": "Kontakt",
+    "payment": "Zahlungsmethoden",
+    "sslEncrypted": "SSL-verschlüsselter Checkout",
+    "ceCertified": "CE-zertifizierte Produkte"
   },
   "Cookie": {
     "title": "Wir verwenden Cookies",

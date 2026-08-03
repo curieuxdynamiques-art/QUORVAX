@@ -11,7 +11,20 @@
     "title": "Premium Tech Accessories for Europe",
     "subtitle": "Laptops, tablets, monitors, headphones, keyboards, mice and more — built for productivity.",
     "cta": "Shop Now",
-    "secondaryCta": "Explore Catalog"
+    "secondaryCta": "Explore Catalog",
+    "badge": "CE-Certified · Ships to all EU countries",
+    "slide1Title": "Elevate Your Workspace",
+    "slide1Desc": "Premium keyboards, mice, and accessories designed for productivity and comfort.",
+    "slide1Cta": "Shop Accessories",
+    "slide2Title": "Sound That Moves You",
+    "slide2Desc": "Immersive headphones and earbuds with active noise cancellation. Hear every detail.",
+    "slide2Cta": "Shop Audio",
+    "slide3Title": "Power. Precision. Performance.",
+    "slide3Desc": "From chargers to monitors — everything your tech setup needs, in one place.",
+    "slide3Cta": "Shop All",
+    "viewAll": "View All",
+    "ctaTitle": "Ready to Upgrade Your Setup?",
+    "ctaDesc": "Free shipping across Europe. 2-year warranty. 30-day returns."
   },
   "Features": {
     "title": "Why Choose Us",
@@ -54,13 +67,23 @@
       "webcam": "Webcams",
       "speaker": "Speakers",
       "smartwatch": "Smartwatches",
-      "storage": "Storage (SSD / USB)"
+      "storage": "Storage (SSD / USB)",
+      "accessory": "Accessories"
     },
     "specs": "Specifications",
     "description": "Description",
     "relatedProducts": "Related Products",
     "inStock": "In Stock",
-    "outOfStock": "Out of Stock"
+    "outOfStock": "Out of Stock",
+    "shopByCategory": "Shop by Category",
+    "categoryDesc": "Find exactly what you need across our full range",
+    "shopNow": "Shop Now"
+  },
+  "Accessories": {
+    "badge": "New Arrivals",
+    "title": "Mouse & Keyboard Accessories",
+    "desc": "Complete your setup with premium pads, stands, and cable management solutions.",
+    "cta": "Explore Accessories"
   },
   "Cart": {
     "title": "Shopping Cart",
@@ -94,7 +117,12 @@
     "newsletter": "Newsletter",
     "newsletterDesc": "Subscribe for product launches and deals.",
     "subscribe": "Subscribe",
-    "emailPlaceholder": "Your email address"
+    "emailPlaceholder": "Your email address",
+    "aboutUs": "About Us",
+    "contactUs": "Contact",
+    "payment": "Payment Methods",
+    "sslEncrypted": "SSL encrypted checkout",
+    "ceCertified": "CE-certified products"
   },
   "Cookie": {
     "title": "We use cookies",

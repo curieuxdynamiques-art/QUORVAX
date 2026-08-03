@@ -11,7 +11,20 @@
     "title": "Accessoires tech premium pour l'Europe",
     "subtitle": "Ordinateurs portables, tablettes, écrans, casques, claviers, souris et plus — conçus pour la productivité.",
     "cta": "Acheter maintenant",
-    "secondaryCta": "Voir le catalogue"
+    "secondaryCta": "Voir le catalogue",
+    "badge": "Certifié CE · Livraison dans tous les pays de l'UE",
+    "slide1Title": "Sublimez votre espace de travail",
+    "slide1Desc": "Claviers, souris et accessoires premium conçus pour la productivité et le confort.",
+    "slide1Cta": "Découvrir les accessoires",
+    "slide2Title": "Le son qui vous émeut",
+    "slide2Desc": "Casques et écouteurs immersifs avec réduction de bruit active. Entendez chaque détail.",
+    "slide2Cta": "Découvrir l'audio",
+    "slide3Title": "Puissance. Précision. Performance.",
+    "slide3Desc": "Des chargeurs aux écrans — tout pour votre setup tech au même endroit.",
+    "slide3Cta": "Tout voir",
+    "viewAll": "Tout voir",
+    "ctaTitle": "Prêt à améliorer votre setup ?",
+    "ctaDesc": "Livraison gratuite en Europe. Garantie 2 ans. Retours sous 30 jours."
   },
   "Features": {
     "title": "Pourquoi nous choisir",
@@ -54,13 +67,23 @@
       "webcam": "Webcams",
       "speaker": "Enceintes",
       "smartwatch": "Montres connectées",
-      "storage": "Stockage (SSD / USB)"
+      "storage": "Stockage (SSD / USB)",
+      "accessory": "Accessoires"
     },
     "specs": "Spécifications",
     "description": "Description",
     "relatedProducts": "Produits similaires",
     "inStock": "En stock",
-    "outOfStock": "Épuisé"
+    "outOfStock": "Épuisé",
+    "shopByCategory": "Acheter par catégorie",
+    "categoryDesc": "Trouvez exactement ce dont vous avez besoin",
+    "shopNow": "Acheter"
+  },
+  "Accessories": {
+    "badge": "Nouveautés",
+    "title": "Accessoires souris & clavier",
+    "desc": "Complétez votre setup avec des tapis, supports et solutions de gestion de câbles premium.",
+    "cta": "Découvrir les accessoires"
   },
   "Cart": {
     "title": "Panier",
@@ -94,7 +117,12 @@
     "newsletter": "Newsletter",
     "newsletterDesc": "Abonnez-vous pour les lancements et offres.",
     "subscribe": "S'abonner",
-    "emailPlaceholder": "Votre adresse e-mail"
+    "emailPlaceholder": "Votre adresse e-mail",
+    "aboutUs": "À propos",
+    "contactUs": "Contact",
+    "payment": "Moyens de paiement",
+    "sslEncrypted": "Paiement chiffré SSL",
+    "ceCertified": "Produits certifiés CE"
   },
   "Cookie": {
     "title": "Nous utilisons des cookies",

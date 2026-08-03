@@ -15,7 +15,8 @@ export type ProductCategory =
   | 'webcam'
   | 'speaker'
   | 'smartwatch'
-  | 'storage';
+  | 'storage'
+  | 'accessory';
 
 export type Product = {
   id: string;
@@ -513,6 +514,142 @@ export const products: Product[] = [
       { label: { en: 'Read / Write', de: 'Lesen / Schreiben', fr: 'Lecture / Écriture' }, value: { en: '2000 / 1800 MB/s', de: '2000 / 1800 MB/s', fr: '2000 / 1800 Mo/s' } },
       { label: { en: 'Shockproof', de: 'Stoßfest', fr: 'Antichoc' }, value: { en: '2 m drop, IP55', de: '2 m Fall, IP55', fr: 'Chute 2 m, IP55' } }
     ]
+  },
+  // ===== 鼠标键盘配件 =====
+  {
+    id: 'acc-001',
+    slug: 'cognac-leather-mousepad',
+    category: 'accessory',
+    name: {
+      en: 'Cognac Leather Mouse Pad',
+      de: 'Cognac-Leder-Mauspad',
+      fr: 'Tapis de souris en cuir Cognac'
+    },
+    description: {
+      en: 'Full-grain leather desk pad with anti-slip suede base. Ages beautifully, developing a unique patina over time.',
+      de: 'Schreibtischunterlage aus Vollnarbenleder mit rutschfester Wildleder-Basis. Entwickelt im Laufe der Zeit eine einzigartige Patina.',
+      fr: 'Tapis de bureau en cuir pleine fleur avec base en daim antidérapante. Développe une patine unique au fil du temps.'
+    },
+    price: 34.9,
+    currency: 'EUR',
+    image: '/acc-mousepad.jpg',
+    wireless: false,
+    inStock: true,
+    ceCertified: false,
+    specs: [
+      { label: { en: 'Material', de: 'Material', fr: 'Matériau' }, value: { en: 'Full-grain leather', de: 'Vollnarbenleder', fr: 'Cuir pleine fleur' } },
+      { label: { en: 'Size', de: 'Größe', fr: 'Taille' }, value: { en: '80 × 30 cm', de: '80 × 30 cm', fr: '80 × 30 cm' } },
+      { label: { en: 'Base', de: 'Unterseite', fr: 'Base' }, value: { en: 'Anti-slip suede', de: 'Rutschfestes Wildleder', fr: 'Daim antidérapant' } },
+      { label: { en: 'Edge', de: 'Kante', fr: 'Bord' }, value: { en: 'Hand-stitched', de: 'Handgenäht', fr: 'Cousu main' } }
+    ]
+  },
+  {
+    id: 'acc-002',
+    slug: 'memory-foam-wrist-rest',
+    category: 'accessory',
+    name: {
+      en: 'Memory Foam Wrist Rest',
+      de: 'Memory-Schaum-Handgelenkauflage',
+      fr: 'Repose-poignet en mousse à mémoire de forme'
+    },
+    description: {
+      en: 'Ergonomic wrist rest with slow-rebound memory foam and breathable fabric cover. Reduces wrist strain during long sessions.',
+      de: 'Ergonomische Handgelenkauflage mit langsamer Rückstellungs-Memory-Schaum und atmungsaktivem Stoffbezug. Reduziert Handgelenksbelastung.',
+      fr: 'Repose-poignet ergonomique avec mousse à mémoire de forme et housse respirante. Réduit la fatigue du poignet.'
+    },
+    price: 19.9,
+    currency: 'EUR',
+    image: '/acc-wristrest.jpg',
+    wireless: false,
+    inStock: true,
+    ceCertified: false,
+    specs: [
+      { label: { en: 'Material', de: 'Material', fr: 'Matériau' }, value: { en: 'Memory foam + fabric', de: 'Memory-Schaum + Stoff', fr: 'Mousse à mémoire + tissu' } },
+      { label: { en: 'Size', de: 'Größe', fr: 'Taille' }, value: { en: '44 × 9 × 2.5 cm', de: '44 × 9 × 2,5 cm', fr: '44 × 9 × 2,5 cm' } },
+      { label: { en: 'Cover', de: 'Bezug', fr: 'Housse' }, value: { en: 'Removable, washable', de: 'Abnehmbar, waschbar', fr: 'Amovible, lavable' } },
+      { label: { en: 'Anti-slip', de: 'Rutschfest', fr: 'Antidérapant' }, value: { en: 'Silicone base', de: 'Silikon-Basis', fr: 'Base silicone' } }
+    ]
+  },
+  {
+    id: 'acc-003',
+    slug: 'cable-management-kit',
+    category: 'accessory',
+    name: {
+      en: 'Desk Cable Management Kit',
+      de: 'Kabelmanagement-Set',
+      fr: 'Kit de gestion des câbles'
+    },
+    description: {
+      en: 'Complete cable management kit with magnetic clips, braided sleeves and under-desk tray. Keep your workspace clutter-free.',
+      de: 'Komplettes Kabelmanagement-Set mit magnetischen Clips, Geflechthüllen und Unter dem Tisch Ablage. Halten Sie Ihren Arbeitsbereich ordentlich.',
+      fr: 'Kit complet de gestion des câbles avec clips magnétiques, gaines tressées et support sous bureau. Gardez votre espace de travail ordonné.'
+    },
+    price: 24.9,
+    currency: 'EUR',
+    image: '/acc-cable.jpg',
+    wireless: false,
+    inStock: true,
+    ceCertified: false,
+    specs: [
+      { label: { en: 'Contents', de: 'Inhalt', fr: 'Contenu' }, value: { en: '6 clips + 2 sleeves + tray', de: '6 Clips + 2 Hüllen + Ablage', fr: '6 clips + 2 gaines + support' } },
+      { label: { en: 'Mounting', de: 'Montage', fr: 'Montage' }, value: { en: 'Magnetic / adhesive', de: 'Magnetisch / Klebend', fr: 'Magnétique / adhésif' } },
+      { label: { en: 'Sleeve size', de: 'Hüllengröße', fr: 'Taille gaine' }, value: { en: '1.5 m, expandable', de: '1,5 m, erweiterbar', fr: '1,5 m, extensible' } },
+      { label: { en: 'Tray capacity', de: 'Ablagekapazität', fr: 'Capacité support' }, value: { en: 'Up to 8 cables', de: 'Bis zu 8 Kabel', fr: "Jusqu'à 8 câbles" } }
+    ]
+  },
+  {
+    id: 'acc-004',
+    slug: 'aluminum-laptop-stand',
+    category: 'accessory',
+    name: {
+      en: 'Aluminum Laptop Stand',
+      de: 'Aluminium-Laptopständer',
+      fr: 'Support pour ordinateur portable en aluminium'
+    },
+    description: {
+      en: 'Ergonomic aluminum laptop stand with adjustable height and silicone pads. Improves airflow and reduces neck strain.',
+      de: 'Ergonomischer Aluminium-Laptopständer mit höhenverstellbar und Silikonpads. Verbessert Luftzirkulation und reduziert Nackenbelastung.',
+      fr: 'Support ergonomique en aluminium avec hauteur réglable et patins en silicone. Améliore la circulation de l\'air et réduit la fatigue cervicale.'
+    },
+    price: 39.9,
+    currency: 'EUR',
+    image: '/acc-stand.jpg',
+    wireless: false,
+    inStock: true,
+    ceCertified: false,
+    specs: [
+      { label: { en: 'Material', de: 'Material', fr: 'Matériau' }, value: { en: 'Aluminum alloy', de: 'Aluminiumlegierung', fr: 'Alliage d\'aluminium' } },
+      { label: { en: 'Adjustable', de: 'Verstellbar', fr: 'Réglable' }, value: { en: '6 height levels', de: '6 Höhenstufen', fr: '6 niveaux de hauteur' } },
+      { label: { en: 'Compatibility', de: 'Kompatibilität', fr: 'Compatibilité' }, value: { en: '11–17" laptops', de: '11–17" Laptops', fr: 'Ordinateurs 11–17"' } },
+      { label: { en: 'Folded size', de: 'Größe gefaltet', fr: 'Taille plié' }, value: { en: '24 × 6 × 1.2 cm', de: '24 × 6 × 1,2 cm', fr: '24 × 6 × 1,2 cm' } }
+    ]
+  },
+  {
+    id: 'acc-005',
+    slug: 'pastel-custom-keycap-set',
+    category: 'accessory',
+    name: {
+      en: 'Pastel Custom Keycap Set',
+      de: 'Pastell Custom-Keycap-Set',
+      fr: 'Set de keycaps personnalisés pastel'
+    },
+    description: {
+      en: '139-key PBT keycap set in pastel colors with dye-sublimation legends. Compatible with most mechanical keyboards.',
+      de: '139-Tasten-PBT-Keycap-Set in Pastellfarben mit Sublimations-Legenden. Kompatibel mit den meisten mechanischen Tastaturen.',
+      fr: 'Set de 39 keycaps PBT en couleurs pastel avec légendes par sublimation. Compatible avec la plupart des claviers mécaniques.'
+    },
+    price: 44.9,
+    currency: 'EUR',
+    image: '/acc-keycap.jpg',
+    wireless: false,
+    inStock: true,
+    ceCertified: false,
+    specs: [
+      { label: { en: 'Material', de: 'Material', fr: 'Matériau' }, value: { en: 'PBT dye-sublimated', de: 'PBT sublimiert', fr: 'PBT sublimé' } },
+      { label: { en: 'Keys', de: 'Tasten', fr: 'Touches' }, value: { en: '139 keys, full set', de: '139 Tasten, komplettes Set', fr: '139 touches, set complet' } },
+      { label: { en: 'Profile', de: 'Profil', fr: 'Profil' }, value: { en: 'Cherry profile', de: 'Cherry-Profil', fr: 'Profil Cherry' } },
+      { label: { en: 'Layout', de: 'Layout', fr: 'Disposition' }, value: { en: 'ISO/ANSI compatible', de: 'ISO/ANSI kompatibel', fr: 'ISO/ANSI compatible' } }
+    ]
   }
 ];
 
@@ -531,7 +668,8 @@ export const CATEGORY_LIST: ProductCategory[] = [
   'webcam',
   'speaker',
   'smartwatch',
-  'storage'
+  'storage',
+  'accessory'
 ];
 
 // 工具函数
