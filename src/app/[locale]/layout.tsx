@@ -20,8 +20,8 @@ export async function generateMetadata({
   return {
     metadataBase: new URL('https://example.com'),
     title: {
-      default: 'VoltKey.eu — Premium Tech Accessories for Europe',
-      template: '%s | VoltKey.eu'
+      default: 'REMANET TRADING — Premium Tech Accessories for Europe',
+      template: '%s | REMANET TRADING'
     },
     description:
       'Premium tech accessories for Europe — laptops, tablets, monitors, headphones, keyboards, mice and more. CE-certified, ships across Europe.',
