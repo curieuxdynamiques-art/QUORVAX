@@ -36,7 +36,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: 'How to Return',
-        body: 'Contact support@voltkey.eu with your order number. We will provide a return label and instructions. Returns are free for defective items; return shipping for change-of-mind is paid by the buyer.'
+        body: 'Contact support@remanettrading.com with your order number. We will provide a return label and instructions. Returns are free for defective items; return shipping for change-of-mind is paid by the buyer.'
       },
       {
         title: 'Refund Processing',
@@ -62,7 +62,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: 'So retournieren Sie',
-        body: 'Kontaktieren Sie support@voltkey.eu mit Ihrer Bestellnummer. Wir stellen ein Rücksendeetikett und Anweisungen bereit. Rücksendungen bei Defekt sind kostenlos; Rücksendekosten bei Umtausch trägt der Käufer.'
+        body: 'Kontaktieren Sie support@remanettrading.com mit Ihrer Bestellnummer. Wir stellen ein Rücksendeetikett und Anweisungen bereit. Rücksendungen bei Defekt sind kostenlos; Rücksendekosten bei Umtausch trägt der Käufer.'
       },
       {
         title: 'Rückerstattungsabwicklung',
@@ -88,7 +88,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: 'Comment retourner',
-        body: 'Contactez support@voltkey.eu avec votre numéro de commande. Nous fournirons une étiquette de retour et des instructions. Les retours pour défaut sont gratuits ; les frais de retour pour changement d’avis sont à la charge de l’acheteur.'
+        body: 'Contactez support@remanettrading.com avec votre numéro de commande. Nous fournirons une étiquette de retour et des instructions. Les retours pour défaut sont gratuits ; les frais de retour pour changement d’avis sont à la charge de l’acheteur.'
       },
       {
         title: 'Traitement des remboursements',

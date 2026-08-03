@@ -39,7 +39,7 @@ const faqs: Record<Locale, QA[]> = {
     },
     {
       q: 'How do I contact support?',
-      a: 'Email support@voltkey.eu or use our contact form. We respond within 24 hours, Mon–Sat.'
+      a: 'Email support@remanettrading.com or use our contact form. We respond within 24 hours, Mon–Sat.'
     }
   ],
   de: [
@@ -73,7 +73,7 @@ const faqs: Record<Locale, QA[]> = {
     },
     {
       q: 'Wie erreiche ich den Support?',
-      a: 'E-Mail an support@voltkey.eu oder über unser Kontaktformular. Wir antworten innerhalb von 24 Stunden, Mo–Sa.'
+      a: 'E-Mail an support@remanettrading.com oder über unser Kontaktformular. Wir antworten innerhalb von 24 Stunden, Mo–Sa.'
     }
   ],
   fr: [
@@ -107,7 +107,7 @@ const faqs: Record<Locale, QA[]> = {
     },
     {
       q: 'Comment contacter le support ?',
-      a: "Envoyez un e-mail à support@voltkey.eu ou utilisez notre formulaire de contact. Nous répondons sous 24 heures, du lundi au samedi."
+      a: "Envoyez un e-mail à support@remanettrading.com ou utilisez notre formulaire de contact. Nous répondons sous 24 heures, du lundi au samedi."
     }
   ]
 };

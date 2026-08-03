@@ -24,7 +24,7 @@ type Section = { title: string; body: string };
 const content: Record<Locale, { intro: string; sections: Section[] }> = {
   en: {
     intro:
-      'These Terms of Service govern your use of the VoltKey.eu website and your purchases.',
+      'These Terms of Service govern your use of the REMANET TRADING website and your purchases.',
     sections: [
       {
         title: '1. Orders & Acceptance',
@@ -44,7 +44,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: '5. Intellectual Property',
-        body: 'All content on this site (logos, texts, images) is the property of VoltKey.eu or its licensors and may not be reproduced without permission.'
+        body: 'All content on this site (logos, texts, images) is the property of REMANET TRADING or its licensors and may not be reproduced without permission.'
       },
       {
         title: '6. Liability',
@@ -62,7 +62,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
   },
   de: {
     intro:
-      'Diese Allgemeinen Geschäftsbedingungen regeln Ihre Nutzung der Website VoltKey.eu und Ihre Einkäufe.',
+      'Diese Allgemeinen Geschäftsbedingungen regeln Ihre Nutzung der Website REMANET TRADING und Ihre Einkäufe.',
     sections: [
       {
         title: '1. Bestellungen & Annahme',
@@ -82,7 +82,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: '5. geistiges Eigentum',
-        body: 'Alle Inhalte dieser Website (Logos, Texte, Bilder) sind Eigentum von VoltKey.eu oder seinen Lizenzgebern und dürfen ohne Genehmigung nicht reproduziert werden.'
+        body: 'Alle Inhalte dieser Website (Logos, Texte, Bilder) sind Eigentum von REMANET TRADING oder seinen Lizenzgebern und dürfen ohne Genehmigung nicht reproduziert werden.'
       },
       {
         title: '6. Haftung',
@@ -100,7 +100,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
   },
   fr: {
     intro:
-      "Les présentes conditions générales régissent votre utilisation du site VoltKey.eu et vos achats.",
+      "Les présentes conditions générales régissent votre utilisation du site REMANET TRADING et vos achats.",
     sections: [
       {
         title: '1. Commandes & acceptation',
@@ -120,7 +120,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: '5. Propriété intellectuelle',
-        body: "Tout le contenu de ce site (logos, textes, images) est la propriété de VoltKey.eu ou de ses concédants et ne peut être reproduit sans autorisation."
+        body: "Tout le contenu de ce site (logos, textes, images) est la propriété de REMANET TRADING ou de ses concédants et ne peut être reproduit sans autorisation."
       },
       {
         title: '6. Responsabilité',

@@ -39,7 +39,7 @@ export default function Navbar() {
             </svg>
           </span>
           <span className="text-lg font-bold tracking-tight text-slate-900">
-            VoltKey<span className="text-brand-600">.eu</span>
+            REMANET TRADING
           </span>
         </Link>
 

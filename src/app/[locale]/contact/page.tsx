@@ -34,7 +34,7 @@ export default function ContactPage() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
                 {t('emailLabel')}
               </h3>
-              <p className="mt-1 font-medium text-slate-900">support@voltkey.eu</p>
+              <p className="mt-1 font-medium text-slate-900">support@remanettrading.com</p>
             </div>
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">

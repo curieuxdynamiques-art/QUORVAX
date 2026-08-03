@@ -112,7 +112,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-6 sm:flex-row">
           <p className="text-sm text-slate-500">
-            © {year} VoltKey.eu. {t('rights')}
+            © {year} REMANET TRADING. {t('rights')}
           </p>
           <div className="flex gap-4 text-xs text-slate-500">
             <span>🇪🇺 Ships to all EU countries</span>

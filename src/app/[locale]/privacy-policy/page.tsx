@@ -28,11 +28,11 @@ type Section = { title: string; body: string };
 const content: Record<Locale, { intro: string; sections: Section[] }> = {
   en: {
     intro:
-      'This Privacy Policy explains how VoltKey.eu collects, uses, and protects your personal data in accordance with the EU General Data Protection Regulation (GDPR).',
+      'This Privacy Policy explains how REMANET TRADING collects, uses, and protects your personal data in accordance with the EU General Data Protection Regulation (GDPR).',
     sections: [
       {
         title: '1. Data Controller',
-        body: 'VoltKey.eu, Friedrichstraße 68, 10117 Berlin, Germany is the data controller responsible for your personal data. Contact: privacy@voltkey.eu.'
+        body: 'REMANET TRADING, Friedrichstraße 68, 10117 Berlin, Germany is the data controller responsible for your personal data. Contact: privacy@remanettrading.com.'
       },
       {
         title: '2. Data We Collect',
@@ -56,7 +56,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: '7. How to Exercise Your Rights',
-        body: 'Email privacy@voltkey.eu with your request. We respond within 30 days. For identity verification, we may request additional information.'
+        body: 'Email privacy@remanettrading.com with your request. We respond within 30 days. For identity verification, we may request additional information.'
       },
       {
         title: '8. International Transfers',
@@ -66,11 +66,11 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
   },
   de: {
     intro:
-      'Diese Datenschutzerklärung erläutert, wie VoltKey.eu Ihre personenbezogenen Daten gemäß der EU-Datenschutz-Grundverordnung (DSGVO) erhebt, verwendet und schützt.',
+      'Diese Datenschutzerklärung erläutert, wie REMANET TRADING Ihre personenbezogenen Daten gemäß der EU-Datenschutz-Grundverordnung (DSGVO) erhebt, verwendet und schützt.',
     sections: [
       {
         title: '1. Verantwortlicher',
-        body: 'VoltKey.eu, Friedrichstraße 68, 10117 Berlin, Deutschland ist der für Ihre personenbezogenen Daten verantwortliche. Kontakt: privacy@voltkey.eu.'
+        body: 'REMANET TRADING, Friedrichstraße 68, 10117 Berlin, Deutschland ist der für Ihre personenbezogenen Daten verantwortliche. Kontakt: privacy@remanettrading.com.'
       },
       {
         title: '2. Erhobene Daten',
@@ -94,7 +94,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: '7. Ausübung Ihrer Rechte',
-        body: 'E-Mail an privacy@voltkey.eu mit Ihrer Anfrage. Wir antworten innerhalb von 30 Tagen. Zur Identitätsprüfung können wir zusätzliche Informationen anfordern.'
+        body: 'E-Mail an privacy@remanettrading.com mit Ihrer Anfrage. Wir antworten innerhalb von 30 Tagen. Zur Identitätsprüfung können wir zusätzliche Informationen anfordern.'
       },
       {
         title: '8. Internationale Übermittlungen',
@@ -104,11 +104,11 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
   },
   fr: {
     intro:
-      "La présente politique de confidentialité explique comment VoltKey.eu collecte, utilise et protège vos données personnelles conformément au Règlement général sur la protection des données (RGPD) de l'UE.",
+      "La présente politique de confidentialité explique comment REMANET TRADING collecte, utilise et protège vos données personnelles conformément au Règlement général sur la protection des données (RGPD) de l'UE.",
     sections: [
       {
         title: '1. Responsable du traitement',
-        body: "VoltKey.eu, Friedrichstraße 68, 10117 Berlin, Allemagne est le responsable du traitement de vos données. Contact : privacy@voltkey.eu."
+        body: "REMANET TRADING, Friedrichstraße 68, 10117 Berlin, Allemagne est le responsable du traitement de vos données. Contact : privacy@remanettrading.com."
       },
       {
         title: '2. Données collectées',
@@ -132,7 +132,7 @@ const content: Record<Locale, { intro: string; sections: Section[] }> = {
       },
       {
         title: '7. Exercer vos droits',
-        body: "Envoyez un e-mail à privacy@voltkey.eu avec votre demande. Nous répondons sous 30 jours. Pour vérifier votre identité, nous pouvons demander des informations supplémentaires."
+        body: "Envoyez un e-mail à privacy@remanettrading.com avec votre demande. Nous répondons sous 30 jours. Pour vérifier votre identité, nous pouvons demander des informations supplémentaires."
       },
       {
         title: '8. Transferts internationaux',

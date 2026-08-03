@@ -34,7 +34,7 @@ export async function generateMetadata({
       }
     },
     openGraph: {
-      title: 'VoltKey.eu — Premium Tech Accessories for Europe',
+      title: 'REMANET TRADING — Premium Tech Accessories for Europe',
       description:
         'Premium tech accessories for Europe — laptops, tablets, monitors, headphones, keyboards, mice and more. CE-certified, ships across Europe.',
       type: 'website'

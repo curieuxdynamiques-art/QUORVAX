@@ -23,7 +23,7 @@ export async function generateMetadata({
 const content: Record<Locale, { mission: string; values: { title: string; desc: string }[] }> = {
   en: {
     mission:
-      'VoltKey.eu is dedicated to bringing high-quality, CE-certified computer peripherals to customers across Europe. We believe great tools should be reliable, affordable, and beautifully designed.',
+      'REMANET TRADING is dedicated to bringing high-quality, CE-certified computer peripherals to customers across Europe. We believe great tools should be reliable, affordable, and beautifully designed.',
     values: [
       { title: 'Quality First', desc: 'Every product is CE-certified and tested to EU standards.' },
       { title: 'European Compliance', desc: 'GDPR, VAT, WEEE, and packaging regulations fully respected.' },
@@ -33,7 +33,7 @@ const content: Record<Locale, { mission: string; values: { title: string; desc: 
   },
   de: {
     mission:
-      'VoltKey.eu widmet sich der Bereitstellung hochwertiger, CE-zertifizierter Computerperipherie für Kunden in ganz Europa. Wir glauben, dass gute Werkzeuge zuverlässig, erschwinglich und schön gestaltet sein sollten.',
+      'REMANET TRADING widmet sich der Bereitstellung hochwertiger, CE-zertifizierter Computerperipherie für Kunden in ganz Europa. Wir glauben, dass gute Werkzeuge zuverlässig, erschwinglich und schön gestaltet sein sollten.',
     values: [
       { title: 'Qualität zuerst', desc: 'Jedes Produkt ist CE-zertifiziert und nach EU-Standards getestet.' },
       { title: 'EU-Konformität', desc: 'GDPR, MwSt, WEEE und Verpackungsvorschriften vollständig eingehalten.' },
@@ -43,7 +43,7 @@ const content: Record<Locale, { mission: string; values: { title: string; desc: 
   },
   fr: {
     mission:
-      "VoltKey.eu s'engage à fournir des périphériques informatiques de haute qualité, certifiés CE, aux clients de toute l'Europe. Nous croyons que de bons outils doivent être fiables, abordables et au design soigné.",
+      "REMANET TRADING s'engage à fournir des périphériques informatiques de haute qualité, certifiés CE, aux clients de toute l'Europe. Nous croyons que de bons outils doivent être fiables, abordables et au design soigné.",
     values: [
       { title: 'Qualité avant tout', desc: 'Chaque produit est certifié CE et testé selon les normes UE.' },
       { title: 'Conformité européenne', desc: 'RGPD, TVA, DEEE et réglementations emballage respectées.' },
