@@ -1,26 +1,57 @@
 'use client';
 
-import { useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useMemo, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import ProductCard from './ProductCard';
-import { CATEGORY_LIST, type Product, type ProductCategory, type Locale } from '@/data/products';
+import {
+  CATEGORY_LIST,
+  type Product,
+  type ProductCategory,
+  type ProductFilter
+} from '@/data/products';
 
-type Filter = 'all' | ProductCategory;
+type CategoryFilter = 'all' | ProductCategory;
 
 const CATEGORY_ORDER: ProductCategory[] = [...CATEGORY_LIST];
 
-export default function ProductList({ products }: { products: Product[] }) {
+function matches(p: Product, f: {
+  cat: CategoryFilter;
+  wireless?: boolean;
+  subCategory?: ProductFilter['subCategory'];
+}) {
+  if (f.cat !== 'all' && p.category !== f.cat) return false;
+  if (f.wireless !== undefined && p.wireless !== f.wireless) return false;
+  if (f.subCategory && p.subCategory !== f.subCategory) return false;
+  return true;
+}
+
+export default function ProductList({
+  products,
+  initialFilter
+}: {
+  products: Product[];
+  initialFilter?: ProductFilter;
+}) {
   const t = useTranslations('Products');
-  const locale = useLocale() as Locale;
-  const [filter, setFilter] = useState<Filter>('all');
+  const initialCategory: CategoryFilter =
+    (initialFilter?.category as CategoryFilter) ?? 'all';
+  const [filter, setFilter] = useState<CategoryFilter>(initialCategory);
 
-  const filtered =
-    filter === 'all' ? products : products.filter((p) => p.category === filter);
+  const f = useMemo(
+    () => ({
+      cat: filter,
+      wireless: initialFilter?.wireless,
+      subCategory: initialFilter?.subCategory
+    }),
+    [filter, initialFilter?.wireless, initialFilter?.subCategory]
+  );
 
-  const tabs: { key: Filter; label: string }[] = [
+  const filtered = products.filter((p) => matches(p, f));
+
+  const tabs: { key: CategoryFilter; label: string }[] = [
     { key: 'all', label: t('categories.all') },
     ...CATEGORY_ORDER.map((c) => ({
-      key: c as Filter,
+      key: c as CategoryFilter,
       label: t(`categories.${c}`)
     }))
   ];
@@ -30,10 +61,14 @@ export default function ProductList({ products }: { products: Product[] }) {
       {/* Filter tabs */}
       <div className="mb-8 flex flex-wrap gap-2">
         {tabs.map((tab) => {
-          const count =
-            tab.key === 'all'
-              ? products.length
-              : products.filter((p) => p.category === tab.key).length;
+          const count = products.filter((p) =>
+            matches(p, {
+              cat: tab.key,
+              wireless: initialFilter?.wireless,
+              subCategory: initialFilter?.subCategory
+            })
+          ).length;
+          if (count === 0 && tab.key !== 'all') return null;
           return (
             <button
               key={tab.key}

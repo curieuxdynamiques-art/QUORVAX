@@ -33,7 +33,7 @@ export default function HeroCarousel() {
   }, [next]);
 
   return (
-    <section className="relative h-[70vh] min-h-[500px] w-full overflow-hidden bg-slate-900">
+    <section className="relative h-[45vh] min-h-[340px] w-full overflow-hidden bg-slate-900">
       {/* Slides */}
       {slides.map((slide, i) => (
         <div
@@ -58,30 +58,16 @@ export default function HeroCarousel() {
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-6">
           <div className="max-w-xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-brand-400" />
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
               {t('badge')}
             </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl">
               {t(slides[current].titleKey)}
             </h1>
-            <p className="mt-5 text-lg text-white/80 sm:text-xl">
+            <p className="mt-3 text-base text-white/80 sm:text-lg">
               {t(slides[current].descKey)}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href={slides[current].href}
-                className="rounded-lg bg-brand-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-600/30 transition-all hover:bg-brand-700 hover:shadow-xl"
-              >
-                {t(slides[current].ctaKey)}
-              </Link>
-              <Link
-                href="/about"
-                className="rounded-lg border border-white/30 bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur transition-colors hover:bg-white/20"
-              >
-                {t('secondaryCta')}
-              </Link>
-            </div>
           </div>
         </div>
       </div>
@@ -90,31 +76,31 @@ export default function HeroCarousel() {
       <button
         onClick={prev}
         aria-label="Previous"
-        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/15 p-2.5 text-white backdrop-blur transition-colors hover:bg-white/30"
+        className="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/15 p-2 text-white backdrop-blur transition-colors hover:bg-white/30"
       >
-        <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
         </svg>
       </button>
       <button
         onClick={next}
         aria-label="Next"
-        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/15 p-2.5 text-white backdrop-blur transition-colors hover:bg-white/30"
+        className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/15 p-2 text-white backdrop-blur transition-colors hover:bg-white/30"
       >
-        <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
         </svg>
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
             aria-label={`Slide ${i + 1}`}
-            className={`h-2.5 rounded-full transition-all ${
-              i === current ? 'w-8 bg-brand-500' : 'w-2.5 bg-white/40 hover:bg-white/60'
+            className={`h-2 rounded-full transition-all ${
+              i === current ? 'w-6 bg-brand-500' : 'w-2 bg-white/40 hover:bg-white/60'
             }`}
           />
         ))}

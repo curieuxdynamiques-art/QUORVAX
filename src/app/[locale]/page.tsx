@@ -5,7 +5,7 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import HeroCarousel from '@/components/HeroCarousel';
 import CategoryShowcase from '@/components/CategoryShowcase';
-import AccessoriesShowcase from '@/components/AccessoriesShowcase';
+import ReviewsSection from '@/components/ReviewsSection';
 
 export default async function HomePage({
   params
@@ -18,7 +18,7 @@ export default async function HomePage({
   const tf = await getTranslations('Features');
   const tp = await getTranslations('Products');
 
-  const featured = products.filter((p) => p.category !== 'accessory').slice(0, 8);
+  const featured = products.slice(0, 8);
 
   const features = [
     { icon: ShippingIcon, title: tf('shipping.title'), desc: tf('shipping.desc') },
@@ -34,16 +34,16 @@ export default async function HomePage({
 
       {/* Features bar */}
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {features.map((f, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-600">
+              <div key={i} className="flex items-center gap-2.5">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-600">
                   <f.icon />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-900">{f.title}</h3>
-                  <p className="text-xs text-slate-500">{f.desc}</p>
+                  <h3 className="text-xs font-semibold text-slate-900">{f.title}</h3>
+                  <p className="text-[11px] text-slate-500">{f.desc}</p>
                 </div>
               </div>
             ))}
@@ -55,11 +55,11 @@ export default async function HomePage({
       <CategoryShowcase />
 
       {/* Featured products */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         <div className="flex items-end justify-between">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">{tp('title')}</h2>
-            <p className="mt-2 text-slate-600">{tp('subtitle')}</p>
+            <h2 className="text-2xl font-bold text-slate-900">{tp('title')}</h2>
+            <p className="mt-1 text-sm text-slate-600">{tp('subtitle')}</p>
           </div>
           <Link
             href="/products"
@@ -68,15 +68,15 @@ export default async function HomePage({
             {t('viewAll')} →
           </Link>
         </div>
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
         </div>
       </section>
 
-      {/* Accessories Module */}
-      <AccessoriesShowcase />
+      {/* Reviews */}
+      <ReviewsSection />
 
       {/* CTA banner */}
       <section className="relative overflow-hidden bg-slate-900">
@@ -85,16 +85,16 @@ export default async function HomePage({
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-30"
         />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 text-center sm:px-6">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+        <div className="relative mx-auto max-w-7xl px-4 py-10 text-center sm:px-6">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">
             {t('ctaTitle')}
           </h2>
-          <p className="mt-4 text-lg text-slate-300">
+          <p className="mt-2 text-base text-slate-300">
             {t('ctaDesc')}
           </p>
           <Link
             href="/products"
-            className="mt-8 inline-block rounded-lg bg-brand-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-600/30 transition-all hover:bg-brand-700"
+            className="mt-5 inline-block rounded-lg bg-brand-600 px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-brand-600/30 transition-all hover:bg-brand-700"
           >
             {t('cta')}
           </Link>

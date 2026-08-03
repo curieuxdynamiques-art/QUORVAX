@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
+import NavDropdown from './NavDropdown';
 import { useCartStore } from '@/store/cart';
 
 export default function Navbar() {
@@ -17,9 +18,8 @@ export default function Navbar() {
     setMounted(true);
   }, []);
 
-  const links = [
+  const simpleLinks = [
     { href: '/' as const, label: t('home') },
-    { href: '/products' as const, label: t('products') },
     { href: '/about' as const, label: t('about') },
     { href: '/contact' as const, label: t('contact') },
     { href: '/faq' as const, label: t('faq') }
@@ -45,20 +45,40 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-1 md:flex">
-          {links.map((l) => (
-            <li key={l.href}>
-              <Link
-                href={l.href}
-                className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
-                  isActive(l.href)
-                    ? 'bg-brand-50 text-brand-700'
-                    : 'text-slate-700 hover:bg-slate-100'
-                }`}
-              >
-                {l.label}
-              </Link>
-            </li>
-          ))}
+          {simpleLinks.map((l) =>
+            l.href === '/' ? (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive(l.href)
+                      ? 'bg-brand-50 text-brand-700'
+                      : 'text-slate-700 hover:bg-slate-100'
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ) : null
+          )}
+          {/* 产品下拉菜单 */}
+          <NavDropdown />
+          {simpleLinks.map((l) =>
+            l.href !== '/' ? (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive(l.href)
+                      ? 'bg-brand-50 text-brand-700'
+                      : 'text-slate-700 hover:bg-slate-100'
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ) : null
+          )}
         </ul>
 
         {/* Right side */}
@@ -102,21 +122,42 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="border-t border-slate-200 bg-white md:hidden">
           <ul className="space-y-1 px-4 py-3">
-            {links.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`block rounded-md px-3 py-2 text-base font-medium ${
-                    isActive(l.href)
-                      ? 'bg-brand-50 text-brand-700'
-                      : 'text-slate-700 hover:bg-slate-100'
-                  }`}
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
+            {simpleLinks.map((l) =>
+              l.href === '/' ? (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block rounded-md px-3 py-2 text-base font-medium ${
+                      isActive(l.href)
+                        ? 'bg-brand-50 text-brand-700'
+                        : 'text-slate-700 hover:bg-slate-100'
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ) : null
+            )}
+            {/* 产品下拉菜单（移动端手风琴版本） */}
+            <NavDropdown />
+            {simpleLinks.map((l) =>
+              l.href !== '/' ? (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block rounded-md px-3 py-2 text-base font-medium ${
+                      isActive(l.href)
+                        ? 'bg-brand-50 text-brand-700'
+                        : 'text-slate-700 hover:bg-slate-100'
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ) : null
+            )}
           </ul>
         </div>
       )}
