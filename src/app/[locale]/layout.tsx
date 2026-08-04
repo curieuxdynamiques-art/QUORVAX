@@ -38,6 +38,9 @@ export async function generateMetadata({
       description:
         'Premium tech accessories for Europe — laptops, tablets, monitors, headphones, keyboards, mice and more. CE-certified, ships across Europe.',
       type: 'website'
+    },
+    verification: {
+      google: '4lsJKmlv-l7DVqFLsUkU5SpxC8Oz2wPgLw7DhRj21HU'
     }
   };
 }
