@@ -200,29 +200,27 @@ function RecentOrders({ orders, locale }: { orders: Order[]; locale: Locale }) {
     <div id="orders-section" className="rounded-xl border border-slate-200 bg-white p-6 scroll-mt-20">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-slate-900">{t('recentOrders')}</h3>
-        {hiddenCount > 0 && (
-          <button
-            type="button"
-            onClick={() => setExpanded(!expanded)}
-            className="inline-flex items-center gap-1 rounded-md border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900"
-          >
-            {expanded ? (
-              <>
-                <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-                </svg>
-                {t('collapse')}
-              </>
-            ) : (
-              <>
-                <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-                {t('showAllOrders', { count: orders.length })}
-              </>
-            )}
-          </button>
-        )}
+        <button
+          type="button"
+          onClick={() => setExpanded(!expanded)}
+          className="inline-flex items-center gap-1 rounded-md border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900"
+        >
+          {expanded ? (
+            <>
+              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+              </svg>
+              {t('collapse')}
+            </>
+          ) : (
+            <>
+              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+              {t('showAllOrders', { count: orders.length })}
+            </>
+          )}
+        </button>
       </div>
       <div className="mt-4 overflow-x-auto">
         <table className="w-full text-sm">
@@ -271,17 +269,6 @@ function RecentOrders({ orders, locale }: { orders: Order[]; locale: Locale }) {
             ))}
           </tbody>
         </table>
-        {!expanded && hiddenCount > 0 && (
-          <div className="mt-4 flex justify-center">
-            <button
-              type="button"
-              onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-1 rounded-full border border-slate-200 px-4 py-1.5 text-xs font-medium text-slate-500 transition-colors hover:bg-slate-50 hover:text-slate-700"
-            >
-              + {hiddenCount} {t('moreOrders')}
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );

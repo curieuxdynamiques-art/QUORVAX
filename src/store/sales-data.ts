@@ -104,9 +104,11 @@ function generateMockOrders(): Order[] {
 
   const orders: Order[] = [];
   const now = new Date();
+  const TARGET_REVENUE = 250000; // 目标总营收 25 万欧元
+  let completedRevenue = 0;
 
-  // 生成过去 90 天的订单，目标总营收 20 万欧元以上
-  for (let i = 0; i < 1680; i++) {
+  // 持续生成订单直到已完成订单的总营收达到目标
+  while (completedRevenue < TARGET_REVENUE) {
     const daysAgo = Math.floor(Math.random() * 90);
     const date = new Date(now);
     date.setDate(date.getDate() - daysAgo);
@@ -135,8 +137,12 @@ function generateMockOrders(): Order[] {
     const method = methods[Math.floor(Math.random() * methods.length)];
     const country = countries[Math.floor(Math.random() * countries.length)];
 
-    // 退款订单只计算部分金额
     const total = status === 'refunded' ? 0 : subtotal + shipping;
+
+    // 只统计已完成订单的营收
+    if (status === 'completed') {
+      completedRevenue += total;
+    }
 
     orders.push({
       id: `RT-${Math.random().toString(36).slice(2, 8).toUpperCase()}-${date.getTime().toString(36).slice(-4).toUpperCase()}`,
@@ -197,7 +203,7 @@ export const useSalesData = create<SalesDataState>()(
 
       getProductSales: () => {
         const map = new Map<string, ProductSales>();
-        get().orders.forEach((order) => {
+        get().orders.filter((o) => o.status === 'completed').forEach((order) => {
           order.items.forEach((item) => {
             const existing = map.get(item.productId);
             if (existing) {
@@ -271,7 +277,7 @@ export const useSalesData = create<SalesDataState>()(
       clearAll: () => set({ orders: [] })
     }),
     {
-      name: 'remanet-sales-data-v2',
+      name: 'remanet-sales-data-v3',
       // 初始化时如果没有数据，填充模拟数据
       onRehydrateStorage: () => (state) => {
         if (state && state.orders.length === 0) {
