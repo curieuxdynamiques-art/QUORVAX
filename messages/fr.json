@@ -333,7 +333,10 @@
     "payment": "Paiement",
     "status": "Statut",
     "total": "Total",
-    "card": "Carte"
+    "card": "Carte",
+    "collapse": "Réduire",
+    "showAllOrders": "Tout afficher ({count})",
+    "moreOrders": "autres commandes"
   },
   "Payment": {
     "selectMethod": "Choisir le moyen de paiement",

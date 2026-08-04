@@ -106,7 +106,7 @@ function generateMockOrders(): Order[] {
   const now = new Date();
 
   // 生成过去 90 天的订单，目标总营收 20 万欧元以上
-  for (let i = 0; i < 920; i++) {
+  for (let i = 0; i < 1680; i++) {
     const daysAgo = Math.floor(Math.random() * 90);
     const date = new Date(now);
     date.setDate(date.getDate() - daysAgo);
@@ -271,7 +271,7 @@ export const useSalesData = create<SalesDataState>()(
       clearAll: () => set({ orders: [] })
     }),
     {
-      name: 'remanet-sales-data',
+      name: 'remanet-sales-data-v2',
       // 初始化时如果没有数据，填充模拟数据
       onRehydrateStorage: () => (state) => {
         if (state && state.orders.length === 0) {
