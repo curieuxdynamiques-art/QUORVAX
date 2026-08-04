@@ -122,7 +122,11 @@
     "contactUs": "Kontakt",
     "payment": "Zahlungsmethoden",
     "sslEncrypted": "SSL-verschlüsselter Checkout",
-    "ceCertified": "CE-zertifizierte Produkte"
+    "ceCertified": "CE-zertifizierte Produkte",
+    "shipTo": "Versand nach"
+  },
+  "Country": {
+    "selectAnotherCountry": "Anderes Land auswählen"
   },
   "Cookie": {
     "title": "Wir verwenden Cookies",

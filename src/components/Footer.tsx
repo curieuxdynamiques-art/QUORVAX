@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import CountrySelector from './CountrySelector';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -100,6 +101,13 @@ export default function Footer() {
               <p className="flex items-center gap-2">
                 <span className="text-brand-500">●</span> {t('ceCertified')}
               </p>
+            </div>
+            {/* Country selector */}
+            <div className="mt-6">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                {t('shipTo')}
+              </p>
+              <CountrySelector />
             </div>
           </div>
         </div>
