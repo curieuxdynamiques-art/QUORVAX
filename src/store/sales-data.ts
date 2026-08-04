@@ -73,7 +73,7 @@ export type DailyRevenue = {
 };
 
 function generateOrderId(): string {
-  return `VK-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+  return `RT-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
 }
 
 // 生成模拟历史订单数据（仅首次初始化时使用）
@@ -100,14 +100,14 @@ function generateMockOrders(): Order[] {
 
   const countries = ['DE', 'FR', 'NL', 'BE', 'AT', 'IT', 'ES', 'PL', 'GB'];
   const methods: ('card' | 'paypal')[] = ['card', 'paypal'];
-  const statuses: OrderStatus[] = ['completed', 'completed', 'completed', 'completed', 'completed', 'pending', 'refunded'];
+  const statuses: OrderStatus[] = ['completed', 'completed', 'completed', 'completed', 'completed', 'completed', 'completed', 'pending', 'refunded'];
 
   const orders: Order[] = [];
   const now = new Date();
 
-  // 生成过去 60 天的订单
-  for (let i = 0; i < 180; i++) {
-    const daysAgo = Math.floor(Math.random() * 60);
+  // 生成过去 90 天的订单，目标总营收 20 万欧元以上
+  for (let i = 0; i < 920; i++) {
+    const daysAgo = Math.floor(Math.random() * 90);
     const date = new Date(now);
     date.setDate(date.getDate() - daysAgo);
     date.setHours(Math.floor(Math.random() * 24), Math.floor(Math.random() * 60));
@@ -118,7 +118,7 @@ function generateMockOrders(): Order[] {
 
     for (let j = 0; j < numItems; j++) {
       const p = products[Math.floor(Math.random() * products.length)];
-      const qty = Math.floor(Math.random() * 2) + 1;
+      const qty = Math.floor(Math.random() * 3) + 1;
       orderItems.push({
         productId: p.id,
         name: p.name,
@@ -139,7 +139,7 @@ function generateMockOrders(): Order[] {
     const total = status === 'refunded' ? 0 : subtotal + shipping;
 
     orders.push({
-      id: `VK-${Math.random().toString(36).slice(2, 8).toUpperCase()}-${date.getTime().toString(36).slice(-4).toUpperCase()}`,
+      id: `RT-${Math.random().toString(36).slice(2, 8).toUpperCase()}-${date.getTime().toString(36).slice(-4).toUpperCase()}`,
       items: orderItems,
       subtotal,
       shipping,
@@ -271,7 +271,7 @@ export const useSalesData = create<SalesDataState>()(
       clearAll: () => set({ orders: [] })
     }),
     {
-      name: 'eu-tech-sales-data',
+      name: 'remanet-sales-data',
       // 初始化时如果没有数据，填充模拟数据
       onRehydrateStorage: () => (state) => {
         if (state && state.orders.length === 0) {
