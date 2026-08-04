@@ -7,9 +7,9 @@ import { useTranslations } from 'next-intl';
 import { useSession, signOut } from 'next-auth/react';
 
 type NavItem = {
-  href: '/admin' | '/admin/products' | '/admin/sales' | '/admin/analytics';
+  href: '/admin' | '/admin/products' | '/admin/sales' | '/admin/analytics' | '/admin/company';
   icon: string;
-  labelKey: 'payment' | 'products' | 'sales' | 'analytics';
+  labelKey: 'payment' | 'products' | 'sales' | 'analytics' | 'company';
 };
 
 const navItems: NavItem[] = [
@@ -17,6 +17,7 @@ const navItems: NavItem[] = [
   { href: '/admin/products', icon: '📦', labelKey: 'products' },
   { href: '/admin/sales', icon: '📊', labelKey: 'sales' },
   { href: '/admin/analytics', icon: '📈', labelKey: 'analytics' },
+  { href: '/admin/company', icon: '🏛️', labelKey: 'company' },
 ];
 
 export default function AdminShell({ children }: { children: React.ReactNode }) {
