@@ -1,8 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '@/i18n/navigation';
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
 import type { Locale } from '@/data/products';
 
 const locales: { code: Locale; label: string; flag: string }[] = [
@@ -13,18 +12,21 @@ const locales: { code: Locale; label: string; flag: string }[] = [
 
 export default function LanguageSwitcher() {
   const locale = useLocale() as Locale;
-  const router = useRouter();
-  const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
 
   const current = locales.find((l) => l.code === locale) ?? locales[0];
 
   function onSelect(next: Locale) {
-    startTransition(() => {
-      router.replace(pathname, { locale: next });
+    if (next === locale) {
       setOpen(false);
-    });
+      return;
+    }
+
+    // 获取当前完整路径，去掉 locale 前缀，拼接新 locale
+    const fullPath = window.location.pathname;
+    const stripped = fullPath.replace(/^\/(en|de|fr)(?=\/|$)/, '') || '/';
+    window.location.href = `/${next}${stripped === '/' ? '' : stripped}`;
+    setOpen(false);
   }
 
   return (
@@ -35,7 +37,6 @@ export default function LanguageSwitcher() {
         className="flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium text-slate-700 hover:bg-slate-100"
         aria-haspopup="listbox"
         aria-expanded={open}
-        disabled={isPending}
       >
         <span className="rounded bg-slate-200 px-1.5 py-0.5 text-xs font-bold text-slate-700">
           {current.flag}

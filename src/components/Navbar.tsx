@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import NavDropdown from './NavDropdown';
+import CountrySelector from './CountrySelector';
 import { useCartStore } from '@/store/cart';
 
 export default function Navbar() {
@@ -79,6 +80,7 @@ export default function Navbar() {
         {/* Right side */}
         <div className="flex items-center gap-2">
           <LanguageSwitcher />
+          <CountrySelector variant="nav" />
           <Link
             href="/cart"
             className="relative rounded-md p-2 text-slate-700 hover:bg-slate-100"
